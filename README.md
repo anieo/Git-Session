@@ -64,7 +64,7 @@ $ git init # Intialize a Embty/new repository
 $ git clone <URL># to Clone/Copy exsiting repository
 ```
  `<URL>`: can be git, shh, http, https, file , etc 
-- ## Recording Changes to the Repository ![N|Solid](./pasted%20image%200.png)
+- ## Recording Changes to the Repository ![N|Solid](ز/pasted%20image%200.png)
     - #### Checking status of your files
         ```sh
         $ git status`
@@ -99,11 +99,64 @@ $ git clone <URL># to Clone/Copy exsiting repository
         File name “.gitignore”
         - .gitignore [`common templates`](https://github.com/github/gitignore)
         - See `man gitignore` for more information
-    - #### Viewing staged and unstaged
-        ``` sh
-        $ git status
-        $ git diff
-        $ git diff --staged
-        ```
+- ## Viewing staged and unstaged
+    ``` sh
+    $ git status
+    $ git diff #diffreneces between commited  and modified/untracked
+    $ git diff --staged #diffreneces between commited and modified/tracked/staged
+    ```
 
-    
+    Example 1
+    ``` sh
+    $ git commit -am “cleaning the stage”
+    $ echo “Git” >> README
+    $ echo  “Git” > Cont.md
+    $ git add README Cont.md
+    $ git diff # 
+    $ echo “OSC” > Cont.md
+    $ git status
+    $ git diff
+    ```
+    Example 2
+    ``` sh
+    $ git commit -am “cleaning the stage”
+    $ echo “1” > file
+    $ git add file && git commit -m “new file”
+    $ echo “2” > file
+    $ git add file
+    $ echo “3” >file
+    $ git diff
+    $ git diff --staged
+    ```
+    - #### Committing Changes
+        ```sh
+        git commit
+        git commit -m "short Message"
+        git commit -am “Your Message” #Stage all untracked files and commit all files in staged area
+        ```
+        Example 
+        ``` sh
+        $ git commit -am “cleaning the stage”
+        $ echo “1” > newfile
+        $ git commit -am “new file”
+        $ git status
+        $ git add newfile && git commit -m “new file”
+        # Change “newfile” and try using commit -am “changed new file”
+        ```
+    - #### Remove
+        ```sh
+        git rm <file name| wild card>
+        ```
+    - #### Move
+        ```sh
+        git mv <file name| wild card>
+        ```
+    - ### Commit History
+        ```sh
+        $git log
+        $ git log -p
+        $ Git log -<number>
+        $ git log --since <date>
+        $git log --until <date>
+        ```
+        `<data>`or `<number>` EX : “ 2008-01-15” or  EX : "2 years 1 day 3 minutes ago" 
