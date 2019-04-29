@@ -9,7 +9,9 @@ A Free Open Source DVCS ”distributed version control system ”
   - Saves the new file as a Whole "easier to retrive lost data"
   - Each Snapshot contains references to the files "to save space uses ref. only"
 - #### Stores new versions of files only
+  ![N|Solid](./saves_new_ver_only.png)
 - #### Each snapshot contains each file
+  ![N|Solid](./snapshots.png)
 - #### Everything is local “distributed”
     - Each Computer has all the history of the project
     - Makes it faster and easeir to contribute 
