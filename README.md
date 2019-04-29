@@ -64,7 +64,7 @@ $ git init # Intialize a Embty/new repository
 $ git clone <URL># to Clone/Copy exsiting repository
 ```
  `<URL>`: can be git, shh, http, https, file , etc 
-- ## Recording Changes to the Repository ![N|Solid](ز/pasted%20image%200.png)
+- ## Recording Changes to the Repository ![N|Solid](./pasted%20image%200.png)
     - #### Checking status of your files
         ```sh
         $ git status`
